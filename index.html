@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cultura Japonesa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="p-5">
+    <nav class="container d-flex justify-content-between align-items-center">
+      <img src="img/logo.png" class="nav-img" alt="Logo Nihon Cultura" loading="lazy" />
+      <ul class="nav mt-5">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tropicalia">Introdução</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+
+      <!-- Acessibilidade -->
+      <div id="acessibilidade" class="menu-acessibilidade">
+        <button id="botao-acessibilidade" class="btn btn-primary rotacao-botao fw-bold">Acessibilidade</button>
+        <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
+          <button id="aumentar-fonte" class="btn btn-primary fw-bold">A +</button>
+          <button id="diminuir-fonte" class="btn btn-primary fw-bold">A -</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <!-- HERO -->
+    <section id="inicio" class="my-5">
+      <div class="inicio-fundo d-flex justify-content-between align-items-center position-relative">
+        <div class="esquerda-conteudo">
+          <h1 class="display-4 text-white fst-italic fw-bold">Cultura Japonesa</h1>
+          <a href="#tropicalia" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero conhecer!</a>
+        </div>
+
+        <!-- imagem lateral -->
+        <img src="img/kimono.jpg"
+             alt="Kimono tradicional japonês"
+             title="Kimono — vestimenta tradicional"
+             class="img-fluid img-inicio rounded-4" />
+      </div>
+    </section>
+
+    <!-- INTRO (mantém id #tropicalia para compatibilidade com seu CSS) -->
+    <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
+      <div class="container d-flex align-items-center">
+        <div class="col-12 col-lg-4 d-flex justify-content-center mb-4 mb-lg-0">
+          <img src="img/matsuri.jpg" class="rounded-pill img-fluid"
+               alt="Festival japonês Matsuri" width="273" height="331" loading="lazy" />
+        </div>
+
+        <div class="col-12 col-lg-7">
+          <h2>O que torna a cultura japonesa especial?</h2>
+          <p class="p-2">
+            Do <strong>zen</strong> à <strong>cerimônia do chá</strong>, do <strong>shodō</strong> (caligrafia)
+            ao <strong>ikebana</strong> (arranjos florais), a cultura japonesa combina simplicidade e profundidade,
+            tradição e modernidade. A estética do <em>wabi-sabi</em> (beleza do imperfeito) aparece nas artes,
+            nos rituais e no cotidiano.
+          </p>
+          <p class="p-2">
+            Festivais <strong>matsuri</strong>, vestes como o <strong>kimono</strong>, a culinária <strong>washoku</strong>,
+            além de anime e mangá, mostram a diversidade cultural do Japão e sua influência global.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria">
+      <h2 class="text-center pt-5">Galeria</h2>
+      <div class="container p-3 mt-3 fundo-galeria">
+        <div class="row justify-content-md-center">
+          <div class="col-md-4 mb-4">
+            <img src="img/matsuri.jpg" class="img-fluid rounded-5" alt="Festival Matsuri" />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img src="img/kimono.jpg" class="img-fluid rounded-5" alt="Kimono tradicional" />
+          </div>
+        </div>
+        <div class="row mt-2 justify-content-md-center">
+          <div class="col-md-4 mb-4">
+            <img src="img/washoku.jpg" class="img-fluid rounded-5" alt="Culinária tradicional japonesa (Washoku)" />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img src="img/hero-torii.jpg" class="img-fluid rounded-5" alt="Torii em paisagem japonesa" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="container p-5 d-flex justify-content-center">
+        <div class="col-md-8 col-lg-10 rounded-5 formulario">
+          <h2 class="mb-3">Entre em contato</h2>
+          <form>
+            <div class="form-group mb-3">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
+                     placeholder="Digite seu nome completo" />
+            </div>
+            <div class="form-group mb-3">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
+                     placeholder="Digite seu email" />
+            </div>
+            <div class="form-group mb-3">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
+                        placeholder="Escreva sua mensagem"></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar mensagem</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center p-3 fst-italic">
+    <p>Acesse nossas redes:</p>
+    <i class="bi bi-whatsapp" aria-label="WhatsApp"></i>
+    <i class="bi bi-instagram" aria-label="Instagram"></i>
+    <i class="bi bi-tiktok" aria-label="TikTok"></i>
+    <p class="mt-3">Projeto acadêmico sem fins comerciais.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

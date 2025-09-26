@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Lemon&display=swap');
+
+:root {
+  --destaque: #E60026;   /* vermelho Japão */
+  --preto: #111111;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--preto);
+}
+
+header { background-color: #ffffff; }
+section { padding-bottom: 5rem; }
+
+.nav-link {
+  color: var(--destaque);
+  font-weight: 600;
+}
+
+/* HERO */
+.inicio-fundo {
+  background-image: url('img/hero-torii.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 80px;
+  width: 100%;
+  height: 606px;
+  padding: 40px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* imagem da direita no hero */
+.img-inicio {
+  position: absolute;
+  right: 0;
+  top: 18rem;
+  width: 45rem;
+  height: auto;
+  max-width: 40%;
+  border: 4px solid rgba(255,255,255,0.6);
+}
+
+/* bloco esquerdo */
+.esquerda-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.botao-inicio {
+  background-color: var(--destaque);
+  border-radius: 30px;
+  border: none;
+  width: 14em;
+  height: 3em;
+  align-content: center;
+}
+
+.display-4 {
+  text-shadow: -5px 5px rgba(0,0,0,0.25);
+}
+
+/* INTRO (mantém id #tropicalia) */
+#tropicalia {
+  position: relative;
+  padding-top: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background:
+    url('img/sakura-dir.png') top right no-repeat,
+    url('img/sakura-esq.png') bottom left no-repeat;
+  background-size: 180px 180px;
+}
+
+#tropicalia .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  font-family: 'Lemon', serif;
+  font-size: 2.5em;
+  font-style: normal;
+  color: var(--destaque);
+}
+
+/* GALERIA */
+#galeria { background-color: #FAF4F4; }
+.fundo-galeria {
+  background: url('img/sakura-dir.png') bottom right no-repeat;
+  background-size: 180px 180px;
+}
+
+/* CONTATO */
+#contato { padding: 4rem 0; }
+
+.formulario {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  font-weight: bold;
+}
+
+.formulario button {
+  background-color: var(--destaque);
+  border: none;
+  font-weight: bold;
+}
+
+.form-control { background-color: #F1EDEF; }
+
+/* ACESSIBILIDADE */
+.menu-acessibilidade{
+  position: fixed;
+  top: 2rem;
+  right: 20px;
+  z-index: 1000;
+}
+.rotacao-botao{
+  transform: rotate(-90deg);
+  transform-origin: right center;
+}
+.opcoes-acessibilidade{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.opcoes-acessibilidade button{ margin-bottom: 5px; }
+.apresenta-lista{ display: none; }
+
+/* RESPONSIVO */
+@media (max-width: 992px){
+  .img-inicio{
+    position: static;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 1rem;
+    border-width: 0;
+  }
+  .inicio-fundo{
+    height: auto;
+    padding-bottom: 2rem;
+  }
+  .nav { margin-top: 0 !important; }
+}
